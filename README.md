@@ -1,5 +1,3 @@
-# EmployeePortal
-
 Ubuntu Setup:
 =============
 #!/bin/bash
