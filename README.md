@@ -10,48 +10,39 @@ pip3 install pymysql </br>
 pip3 install boto3 </br>
 python3 EmpApp.py </br>
 
-config.py:
-==========
-customhost = "<rds_db_instance>.ap-south-1.rds.amazonaws.com"
-customuser = "admin"
-custompass = "password"
-customdb = "<db_name>"
-custombucket = "<s3 bucket>"
-customregion = "ap-south-1"
-
 Setting up mysql table in EC2:
 ===============================
-mysql -h <rds_db_instance>.ap-south-1.rds.amazonaws.com -u admin -p
-mysql> create database <db_name>;
-Query OK, 1 row affected (0.01 sec)
+>> mysql -h <rds_db_instance>.ap-south-1.rds.amazonaws.com -u admin -p </br>
+mysql> create database <db_name>; </br>
+Query OK, 1 row affected (0.01 sec) </br>
+</br>
+mysql> use <db_name>; </br>
+Database changed </br>
+</br>
 
-mysql> use <db_name>;
-Database changed
-
-
-mysql> create table employees(emp_id int(20) auto_increment, name varchar(20), age int(20), location varchar(20), technology varchar(20), PRIMARY KEY (emp_id));
-Query OK, 0 rows affected, 2 warnings (0.03 sec)
-
-mysql> alter table employees AUTO_INCREMENT=2024001;
-Query OK, 0 rows affected (0.01 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-
-mysql> 
-mysql> 
-mysql> select * from employees;
-Empty set (0.00 sec)
-
-mysql> describe employees;
-+------------+-------------+------+-----+---------+----------------+
-| Field      | Type        | Null | Key | Default | Extra          |
-+------------+-------------+------+-----+---------+----------------+
-| emp_id     | int         | NO   | PRI | NULL    | auto_increment |
-| name       | varchar(20) | YES  |     | NULL    |                |
-| age        | int         | YES  |     | NULL    |                |
-| location   | varchar(20) | YES  |     | NULL    |                |
-| technology | varchar(20) | YES  |     | NULL    |                |
-+------------+-------------+------+-----+---------+----------------+
-5 rows in set (0.01 sec)
+mysql> create table employees(emp_id int(20) auto_increment, name varchar(20), age int(20), location varchar(20), technology varchar(20), PRIMARY KEY (emp_id)); </br>
+Query OK, 0 rows affected, 2 warnings (0.03 sec) </br>
+</br>
+mysql> alter table employees AUTO_INCREMENT=2024001; </br>
+Query OK, 0 rows affected (0.01 sec) </br>
+Records: 0  Duplicates: 0  Warnings: 0 </br>
+</br>
+mysql> </br> 
+mysql> </br>
+mysql> select * from employees; </br>
+Empty set (0.00 sec) </br>
+</br>
+mysql> describe employees; </br>
++------------+-------------+------+-----+---------+----------------+ </br>
+| Field      | Type        | Null | Key | Default | Extra          | </br>
++------------+-------------+------+-----+---------+----------------+ </br>
+| emp_id     | int         | NO   | PRI | NULL    | auto_increment | </br>
+| name       | varchar(20) | YES  |     | NULL    |                | </br>
+| age        | int         | YES  |     | NULL    |                | </br>
+| location   | varchar(20) | YES  |     | NULL    |                | </br>
+| technology | varchar(20) | YES  |     | NULL    |                | </br>
++------------+-------------+------+-----+---------+----------------+ </br>
+5 rows in set (0.01 sec)</br>
 
 
 
