@@ -1,0 +1,6 @@
+customhost = "test-db.cx6mkq0qygd9.ap-south-1.rds.amazonaws.com"
+customuser = "admin"
+custompass = "password"
+customdb = "employee"
+custombucket = "capstone-emp"
+customregion = "ap-south-1"

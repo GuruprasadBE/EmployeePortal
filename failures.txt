@@ -1,0 +1,12 @@
+Please use AWS4-HMAC-SHA256 - during s3 bucket image access
+https://github.com/jschneier/django-storages/issues/687
+
+Employee id auto increment mysql
+https://stackoverflow.com/questions/1485668/how-to-set-initial-value-and-auto-increment-in-mysql
+
+s3 bucket image access - access denied
+give public access from bucket permissions.
+
+
+
+
