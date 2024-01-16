@@ -12,7 +12,7 @@ python3 EmpApp.py </br>
 
 Setting up mysql table in EC2:
 ===============================
->> mysql -h <rds_db_instance>.ap-south-1.rds.amazonaws.com -u admin -p </br>
+mysql -h <rds_db_instance>.ap-south-1.rds.amazonaws.com -u admin -p </br>
 mysql> create database <db_name>; </br>
 mysql> use <db_name>; </br>
 
