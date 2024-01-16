@@ -1,14 +1,14 @@
 Ubuntu Setup:
 =============
-#!/bin/bash
-apt update
-apt install git -y
-git clone https://github.com/norman0402/aws-live.git
-cd aws-live
-pip3 install flask
-pip3 install pymysql
-pip3 install boto3
-python3 EmpApp.py
+#!/bin/bash </br>
+apt update </br>
+apt install git -y </br>
+git clone https://github.com/norman0402/aws-live.git </br>
+cd aws-live </br>
+pip3 install flask </br>
+pip3 install pymysql </br>
+pip3 install boto3 </br>
+python3 EmpApp.py </br>
 
 config.py:
 ==========
