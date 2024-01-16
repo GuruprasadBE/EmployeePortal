@@ -31,6 +31,12 @@ mysql> describe employees; </br>
 +------------+-------------+------+-----+---------+----------------+ </br>
 5 rows in set (0.01 sec)</br>
 
+Lambda Function and Trigger:
+=============================
+https://awstip.com/s3-upload-lambda-trigger-5afd9e9be819 </br>
+https://beabetterdev.com/2022/12/04/aws-s3-file-upload-lambda-trigger-tutorial/ </br>
+
+https://stackoverflow.com/questions/64566908/aws-cloudwatch-log-group-does-not-exist </br>
 
 
 
