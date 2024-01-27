@@ -42,30 +42,16 @@ SNS Topic:
 ==========
 https://medium.com/@ernestosafo11/creating-and-subscribing-to-sns-topics-and-adding-sns-event-for-s3-bucket-df2e9cfb9d5d
 https://www.geeksforgeeks.org/amazon-web-services-amazon-s3-notifications-to-sns/
-{
-  "Version": "2012-10-17",
-  "Id": "example-ID",
-  "Statement": [
-    {
-      "Sid": "Example SNS topic policy",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "s3.amazonaws.com"
-      },
-      "Action": "SNS:Publish",
-      "Resource": "<snstopic_arn>",
-      "Condition": {
-        "StringEquals": {
-          "aws:SourceAccount": "bucket-owner-account-id"
-        },
-        "ArnLike": {
-          "aws:SourceArn": "<s3bucket_arn>"
-        }
-      }
-    }
-  ]
-}
 
+Create a SNS Topic.
+Create Subscription and give it as Email.
+Now go to S3 bucket -> Properties -> EventNotifications
+Create Event Notification and Choose the Destination as the SNS Topic
+This will send out a json email notification when a object is uploaded to the S3 bucket.
+To get a custom email message, create a lambda function and add the trigger as SNS topic.
+Now you will receive the SNS event in the lambda function. Parse based on your need and publish it to SNS topic to send out as email.
+For this lambda function, you need to attach a inline policy, sns:Publish from Lambda -> Configuration -> Permissions -> Execution Role -> click on 'Role Name'. 
+This will navigate to the IAM page where you can create the inline policy, by searching for SNS and Publish keyword. And here you can restrict the ARNs to the sns topic ARN which we are using.
 
 
 
