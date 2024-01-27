@@ -38,7 +38,33 @@ https://beabetterdev.com/2022/12/04/aws-s3-file-upload-lambda-trigger-tutorial/ 
 
 https://stackoverflow.com/questions/64566908/aws-cloudwatch-log-group-does-not-exist </br>
 
-
+SNS Topic:
+==========
+https://medium.com/@ernestosafo11/creating-and-subscribing-to-sns-topics-and-adding-sns-event-for-s3-bucket-df2e9cfb9d5d
+https://www.geeksforgeeks.org/amazon-web-services-amazon-s3-notifications-to-sns/
+{
+  "Version": "2012-10-17",
+  "Id": "example-ID",
+  "Statement": [
+    {
+      "Sid": "Example SNS topic policy",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "<snstopic_arn>",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "bucket-owner-account-id"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "<s3bucket_arn>"
+        }
+      }
+    }
+  ]
+}
 
 
 
