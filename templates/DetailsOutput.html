@@ -151,6 +151,7 @@ th, td {
 					<tr>
 						<th>ID</th>
 						<th>Name</th>
+						<th>Age</th>
 						<th>Location</th>
 					</tr>
 					
@@ -160,6 +161,7 @@ th, td {
 						<td><a id="{{result[0]}}" href="{{ url_for('GetSingleEmpData', emp_id=result[0]) }}">{{result[0]}}</a></td>
 						<td><a id="{{result[0]}}" href="{{ url_for('GetSingleEmpData', emp_id=result[0]) }}">{{result[1]}}</a></td>
 						<td><a id="{{result[0]}}" href="{{ url_for('GetSingleEmpData', emp_id=result[0]) }}">{{result[2]}}</a></td>
+						<td><a id="{{result[0]}}" href="{{ url_for('GetSingleEmpData', emp_id=result[0]) }}">{{result[3]}}</a></td>
 						<td><button class="btn-success" style="border-radius: 6px" id="{{result[0]}}" onclick="location.href='{{ url_for('GetEditData', id=result[0]) }}'">Edit</button></td>
 						<td><button class="btn-danger" style="border-radius: 6px" id="{{result[0]}}" onclick="location.href='{{ url_for('DeleteEmp', id=result[0]) }}'">Delete</button></td>
 					</tr>
